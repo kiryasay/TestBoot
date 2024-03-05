@@ -27,10 +27,4 @@ private MyUserDetailServices service;
         return ResponseEntity.ok("I am Registred User");
     }
 
-    @GetMapping("/admin-panel")
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-    public ResponseEntity<String> adminUser() {return ResponseEntity.ok("ADMIN PANEL");}
-
-
-
 }

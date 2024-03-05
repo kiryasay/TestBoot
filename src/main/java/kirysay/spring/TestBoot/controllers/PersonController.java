@@ -18,11 +18,12 @@ public class PersonController {
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping()
-    public List<MyUser> showAll() {
-        return userRepository.findAll();
-    }
 
+    public List<MyUser> showAll() {
+        List<MyUser> users = userRepository.findAll();
+        System.out.println("Number of users retrieved: " + users.size());
+        return users;
+    }
     @GetMapping("/{id}")
     public MyUser showById(@PathVariable int id) {
         Optional<MyUser> userOptional = userRepository.findByUserId(id);
