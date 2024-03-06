@@ -29,4 +29,9 @@ public class PersonController {
         Optional<MyUser> userOptional = userRepository.findByUserId(id);
         return userOptional.orElse(null);
     }
+
+    public Optional<MyUser> findById(int id) {
+        Optional<MyUser> users = userRepository.findById(id);
+        return users;
+    }
 }

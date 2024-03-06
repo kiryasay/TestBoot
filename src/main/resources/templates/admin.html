@@ -14,7 +14,7 @@
         <td th:text="${user.userName}"></td>
         <td th:text="${user.userRole}"></td>
         <td>
-            <form th:action="@{/admin/user/edit/{userId}(userId=${user.userId})}" method="get">
+            <form th:action="@{/admin-panel/edituser/{userId}(userId=${user.userId})}" method="get">
                 <input type="submit" value="Редактировать">
             </form>
             <form th:action="@{/admin/user/ban/{userId}(userId=${user.userId})}" method="post">

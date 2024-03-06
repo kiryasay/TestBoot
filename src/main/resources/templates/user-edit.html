@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Panel</title>
+</head>
+<body>
+<h1>Admin Panel</h1>
+<hr>
+<h4>Редактирование пользователя</h4>
+<form action="/admin-panel/edituser/{userId}" method="post">
+    <input type="hidden" name="userId" th:value="${user.userId}" readonly="readonly" />
+    <label>Имя пользователя:</label>
+    <input type="text" name="userName" th:value="${user.userName}" />
+    <br>
+    <label>Роль:</label>
+    <input type="text" name="userRole" th:value="${user.userRole}" />
+    <br>
+    <input type="submit" value="Сохранить изменения">
+</form>
+</body>
+</html>
